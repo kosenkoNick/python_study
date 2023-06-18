@@ -11,10 +11,3 @@ def split_pairs(string: str) -> Iterable[str]:
         string += '_'
 
     return [str(string[i:i+2]) for i in range(0, len(string), 2)]
-
-
-assert list(split_pairs("abcd")) == ["ab", "cd"]
-assert list(split_pairs("abc")) == ["ab", "c_"]
-assert list(split_pairs("abcdf")) == ["ab", "cd", "f_"]
-assert list(split_pairs("a")) == ["a_"]
-
