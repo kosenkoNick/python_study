@@ -14,6 +14,3 @@ def split_pairs(string: str) -> Iterable[str]:
     :return: iterable of strings
     """
     return [ch1 + ch2 for ch1, ch2 in zip(string[::2], string[1::2] + '_')]
-
-
-print(split_pairs('abcdef'))

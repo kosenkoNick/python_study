@@ -7,7 +7,6 @@ def split_pairs(string: str) -> Iterable[str]:
     :param string: string to split
     :return: iterable of strings
     """
-    if len(string) % 2 == 1:
-        string += '_'
 
-    return [str(string[i:i+2]) for i in range(0, len(string), 2)]
+    string += '_' if len(string) % 2 == 1 else ''
+    return [str(string[i:i + 2]) for i in range(0, len(string), 2)]
