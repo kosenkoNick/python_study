@@ -9,12 +9,9 @@ def reversed_generator(iterable: Iterable) -> Generator:
     yield from iterable[::-1]
 
 
-def cycle_generator(iterable: Iterable) -> Generator:       # ???
+def cycle_generator(iterable: Iterable) -> Generator:
     while True:
-        # try:
         yield from iterable
-        # except StopIteration:
-        #     pass
 
 
 def ping_pong_generator(iterable: Iterable) -> Generator:
